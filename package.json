@@ -1,0 +1,19 @@
+{
+  "name": "digistt",
+  "version": "1.0.0",
+  "description": "Test task by Digis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisBelkin/digisTT.git"
+  },
+  "author": "DenisBelkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisBelkin/digisTT/issues"
+  },
+  "homepage": "https://github.com/DenisBelkin/digisTT#readme"
+}
