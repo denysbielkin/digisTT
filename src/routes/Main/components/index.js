@@ -6,8 +6,10 @@ import {Button, Spin} from 'antd';
 
 import {urls, mapAPIkey} from '../../../common/constants';
 import GoogleMap from '../../../components/Map';
-import {ADD_MARKER, REMOVE_MARKER, SAVE_MARKERS } from "../../../store/actions/markersActions";
-import { SET_CURRENT_POSITION} from "../../../store/actions/positionActions";
+import Centralizer from '../../../components/Centralizer';
+
+import {ADD_MARKER, REMOVE_MARKER, SAVE_MARKERS } from '../../../store/actions/markersActions';
+import { SET_CURRENT_POSITION} from '../../../store/actions/positionActions';
 
 export class Main extends Component {
     constructor(props) {
@@ -44,7 +46,8 @@ export class Main extends Component {
                 <Button onClick={this.saveMarkers}>SAVE</Button>
                 <Button onClick={this.loadMarkers}>LOAD</Button>
                 <Button onClick={this.loadCafe}>LOAD CAFE</Button>
-                {currentPosition.lat && <GoogleMap
+                {currentPosition.lat ?
+                    <GoogleMap
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${mapAPIkey}`}
                     loadingElement={<div style={{height: `700px`}}/>}
                     containerElement={<div style={{height: `700px`}}/>}
@@ -53,8 +56,10 @@ export class Main extends Component {
                     defaultCenter={currentPosition}
                     addMarker={addMarker}
                     deleteMarker={removeMarker}
-                />}
-                {!currentPosition.lat && <div><Spin /></div>}
+                />
+                : <Centralizer><Spin size={25}/></Centralizer>
+                }
+
 
             </div>
         )

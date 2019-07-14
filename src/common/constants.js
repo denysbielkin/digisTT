@@ -1,7 +1,7 @@
 export const urls = {
     routes: {
-        signIn: '/auth',
-        main: '/',
+        signIn: '/',
+        main: '/map',
         about: '/about'
     }
 };
