@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-
 import {Button, Spin} from 'antd';
 
 import {storageMarkersKey, mapAPIkey} from '../../../common/constants';
 import GoogleMap from '../../../components/Map';
 import Centralizer from '../../../components/Centralizer';
-
-import {ADD_MARKER, REMOVE_MARKER, SAVE_MARKERS} from '../../../store/actions/markersActions';
-import {SET_CURRENT_POSITION} from '../../../store/actions/positionActions';
 
 import {StyledButtonGroup} from './styled';
 
@@ -69,16 +64,4 @@ export class Main extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    places: state.markers.markers,
-    currentPosition: state.position.coords,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    addMarker: marker => dispatch({type: ADD_MARKER, payload: marker}),
-    removeMarker: marker => dispatch({type: REMOVE_MARKER, payload: marker}),
-    saveMarkers: markers => dispatch({type: SAVE_MARKERS, payload: markers}),
-    setCurrentPosition: geolocation => dispatch({type: SET_CURRENT_POSITION, payload: geolocation.coords}),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default Main

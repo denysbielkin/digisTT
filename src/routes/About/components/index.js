@@ -42,6 +42,10 @@ export default class About extends Component {
                     Denys Bielkin - Front-end Developer
                 </h2>
 
+                <StyledAboutBlock>
+                    <h3><a href="https://www.dropbox.com/s/77liqqdfttwh0se/CV%202019.pdf?dl=0">CV 2019</a></h3>
+                </StyledAboutBlock>
+
                 <div>
                     <StyledAboutBlock>
                         <h3>Summary:</h3>
