@@ -19,6 +19,7 @@
   "homepage": "https://github.com/DenisBelkin/digisTT#readme",
   "dependencies": {
     "antd": "^3.20.1",
+    "js-md5": "^0.7.3",
     "lodash": "^4.17.14",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
